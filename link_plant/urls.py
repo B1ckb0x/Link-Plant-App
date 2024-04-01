@@ -19,5 +19,6 @@ from .views import *
 
 urlpatterns = [
     path('', LinkListView.as_view(), name='link-list'),
-    path('link/create/', LinkCreateView.as_view(), name='link-create')
+    path('link/create/', LinkCreateView.as_view(), name='link-create'),
+    path('link/<int:pk>/update/', LinkUpdateView.as_view(), name='link-update'),
 ]
